@@ -1,0 +1,10 @@
+<% content_for :title, l(:planning_iteration_for) + " #{@project}" %>
+<% content_for :h2, l(:planning_iteration_for) + " #{h(@project)}" %>
+<% body_classes << 'iteration_planning' %>
+
+<% form_for [@project, @iteration] do |form| %>
+  <%= render form %>
+  <p class="submit">
+  <%= form.submit l(:create_iteration) %>
+  </p>
+<% end %>

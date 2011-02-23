@@ -1,0 +1,9 @@
+<% content_for :title, "#{@project} Backlog" %>
+<% content_for :h2, h("#{@project} Backlog") %>
+<% body_classes << 'guidance' %>
+
+<h2><%= l(:empty_backlog) %></h2>
+<p>
+  <%= l(:new_story_in_backlog) %>
+  <%= link_to l(:new_story_accusative), new_project_story_path(@project) %>.
+</p>

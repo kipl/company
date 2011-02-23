@@ -1,0 +1,18 @@
+.draggables .pending .story_header { border-color:#ddd }
+.draggables .in_progress .story_header { border-color:#3dc0fd }
+.draggables .testing .story_header { border-color:#fde03d }
+.draggables .complete .story_header { border-color:#3dfd4f }
+.draggables .story { cursor:pointer }
+
+.story .story_content { border-color:#aaa }
+.story,
+.story h4 { background:#fff }
+.story h4 a, .story h4 { color:#333 }
+.story .less_more a { outline:none }
+
+.story .story_header { border-bottom:2px solid #99f }
+.story ol li{ border-bottom:1px solid #ccf }
+.story ol li:last-child { border-bottom:none }
+
+.story .story_content p.estimate { background:#eee; border-color:#ddd }
+

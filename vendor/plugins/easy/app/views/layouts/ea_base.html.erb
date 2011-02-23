@@ -1,0 +1,72 @@
+<% inside_layout 'base' do -%>
+<% content_for :header_tags do %>
+<%= stylesheet_link_tag(
+                        'story/layout',
+                        'story/colours',
+                        'story/typography',
+
+                        'iteration/layout',
+                        'iteration/typography',
+                        'iteration/colours',
+                        'iteration_planning/layout',
+                        'iteration_planning/typography',
+                        'iteration_planning/colours',
+                        'iteration_active/layout',
+                        'iteration_active/typography',
+                        'iteration_active/colours',
+
+                        'application/layout',
+                        'application/colours',
+                        'application/typography',
+                        :plugin => 'easy_agile') %>
+<% end %>
+
+<div class="tabs">
+  <% if controller.has_tabs? %>
+    <% selected_tab = controller.tab_name %>
+    <ul>
+      <% ea_tabs.each do |tab| -%>
+        <li><%= link_to l(tab[:label]), tab[:path],
+                :id => "tab-#{tab[:id]}",
+                :class => (tab[:id] != selected_tab ? nil : 'selected'),
+                :onclick => "showTab('#{tab[:id]}'); this.blur(); return false;" %></li>
+      <% end -%>
+    </ul>
+  <% end %>
+  <div class="contextual">
+    <%= link_to l(:new_story),
+        contextual_new_story_path,
+        :accesskey => 'n',
+        :id => 'contextual_new_story',
+        :class => 'icon icon-new-task' %>
+    <%= link_to l(:plan_iteration),
+        new_project_iteration_path(@project),
+        :accesskey => 'i',
+        :id => 'contextual_new_iteration',
+        :class => 'icon icon-plan-iteration' %>
+    <%= link_to l(:dashboard),
+        project_easy_agile_path(@project),
+        :accesskey => 'd',
+        :id => 'contextual_ea_dashboard',
+        :class => 'icon icon-ea-dashboard' %>
+  </div>
+</div>
+
+<div class="ea_body <%= body_classes.join(' ') %>"
+     id="<%= "#{controller.try(:tab_name) || controller.controller_name}_#{controller.action_name}" %>">
+  <div class="ea_container">
+
+    <h2><%= yield(:h2) %></h2>
+    <% unless yield(:actions).blank? %>
+      <ul id="actions">
+        <%= yield :actions %>
+      </ul>
+    <% end %>
+
+    <%= yield %>
+  </div>
+</div>
+<% unless request.user_agent.include?('iPhone') %>
+  <%= javascript_includes %>
+<% end %>
+<% end %>

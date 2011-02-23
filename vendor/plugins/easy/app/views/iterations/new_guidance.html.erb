@@ -1,0 +1,10 @@
+<% content_for :title, l(:new_iteration_for) + " #{@project}" %>
+<% content_for :h2, l(:no_stories_for) + " #{h(@project)}" %>
+<% body_classes << 'guidance' %>
+
+<p>
+  <%= l(:no_stories_no_iteration) %>
+</p>
+<p>
+  <%= l(:you_might_want) %> <%= link_to l(:create_story_for_project), new_project_story_path(@project) %>.
+</p>

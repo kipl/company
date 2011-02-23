@@ -1,0 +1,9 @@
+<% content_for :title, l(:new_story) %>
+<% content_for :h2, l(:new_story) %>
+<% form_for @story, :url => project_stories_path do |form| %>
+  <%= form.error_messages %>
+  <%= render form %>
+  <p class="submit">
+    <%= form.submit l(:create_story) %>
+  </p>
+<% end %>

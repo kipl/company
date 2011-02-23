@@ -1,0 +1,6 @@
+<li>
+<%= link_to_user story_team_member.user %>
+<% if story_team_member.user == User.current %>
+<%= button_to l(:remove_me), [story_team_member.story.project, story_team_member], :method => :delete %>
+<% end %>
+</li>

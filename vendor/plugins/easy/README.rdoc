@@ -1,0 +1,41 @@
+= easy_agile
+
+Easy Agile is a Redmine[http://www.redmine.org] plugin for agile development teams. Based on the original {Simply Agile}[http://github.com/camelpunch/simply_agile].
+
+== Install
+{Install Redmine}[http://www.redmine.org/wiki/redmine/RedmineInstall]. Follow the Redmine plugin installation manual[http://www.redmine.org/wiki/redmine/Plugins]. Or go this way (inside the Redmine directory). Make sure you have git installed:
+  ./script/plugin install git@github.com:SphereConsultingInc/easy_agile.git
+or:
+  cd vendor/plugins
+  git clone git://github.com/SphereConsultingInc/easy_agile.git
+Start migration:
+  rake db:migrate_plugins RAILS_ENV=production (or simply "rake db:migrate_plugins" for development mode)
+
+Install nested_layouts[https://github.com/jwigal/nested_layouts] plugin (from Redmine root directory):
+  ./script/plugin install git://github.com/jwigal/nested_layouts.git
+
+Install ImageMagick and RMagick. See the RMagick's {Installation FAQ}[http://rmagick.rubyforge.org/install-faq.html] for details. Windows users might need to reinstall RMagick and ImageMagick in case of any problems.
+
+Install {gruffs library}[https://github.com/topfunky/gruff] (if you want your Redmine installation to be portable):
+  gem install gruff
+  cd vendor/plugins && gem unpack gruff
+or (if you want to use gruff from gems):
+  gem install gruff
+and add the following line to your config/environment.rb file:
+  config.gem "gruff"
+
+Then restart Redmine. In project's setting in Modules include 'Easy Agile' or enable it globally for all projects from Administration area. It will be available under 'Easy Agile' tab.
+
+Recent activities summary is available inside 'My Page' area.
+
+== Description
+Easy Agile is a simple task board which allows you to define stories and track their statuses through iteration. The application is quite straigtforward for the people familiar with the SCRUM and Agile methodology.
+
+== Credits
+Easy Agile based on the original {Simply Agile}[http://github.com/camelpunch/simply_agile] standalone application by {Jandaweb}[http://www.jandaweb.com/] (see LICENSE.simply_agile).
+
+=== Project team
+* Mykhaylo Sorochan - software development
+* Nataliya Shatokhina - GUI testing
+
+Copyright (c) 2010 {Sphere Consulting Inc.}[http://www.sphereinc.com], released under the MIT license (see LICENSE).

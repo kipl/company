@@ -1,0 +1,10 @@
+<% content_for :title, "#{@project} | Projects" %>
+<% content_for :h2, h(@project) %>
+<% body_classes << 'guidance' %>
+
+<%= simple_format h(@project.description) %>
+
+<h2><%= l(:no_stories) %></h2>
+<p>
+<%= l(:you_can_start_by_new_story) %> <%= link_to l(:creating_new_story), [:new, @project, :story] %>.
+</p>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  contact_id: 1
+  customer_id: 1
+  mainobj: MyString
+  incobj: MyString
+  otherobj: MyString
+
+two:
+  contact_id: 1
+  customer_id: 1
+  mainobj: MyString
+  incobj: MyString
+  otherobj: MyString

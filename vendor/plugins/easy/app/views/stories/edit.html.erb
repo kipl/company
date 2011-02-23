@@ -1,0 +1,9 @@
+<% content_for :title, "#{l(:editing)} #{@story}" %>
+<% content_for :h2, h("#{l(:editing)} #{@story}") %>
+<% form_for [@project, @story] do |form| %>
+  <%= form.error_messages %>
+  <%= render form %>
+  <p class="submit">
+  <%= form.submit l(:update_story) %>
+  </p>
+<% end %>

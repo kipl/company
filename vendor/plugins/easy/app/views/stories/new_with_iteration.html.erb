@@ -1,0 +1,13 @@
+<% content_for :title, l(:new_story) %>
+<% content_for :h2, l(:new_story) %>
+<% form_for [@project, @story] do |form| %>
+<%= form.error_messages %>
+<p class="checkbox" id="add_to_iteration">
+  <%= form.check_box :iteration_id, {}, @iteration.id, nil %>
+  <%= form.label :iteration_id, l(:add_to_iteration) + " '#{h(@iteration)}'" %>
+</p>
+<%= render form %>
+<p class="submit">
+  <%= form.submit l(:create_story) %>
+</p>
+<% end %>

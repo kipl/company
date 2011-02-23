@@ -1,0 +1,128 @@
+/* /\* basic layout *\/ */
+/* #container { margin:0 0 0 0; position:relative } */
+/* #header { width:100%; padding-bottom:5px } */
+/* #contextual_new_story { position:absolute; width:118px; height:99px; */
+/*                         right:30px; top:2px } */
+/* #footer { clear:both; padding:0 0 30px 0 } */
+/* #footer p { max-width:none } */
+
+/* .important_message { position:absolute; top:0; left:0; z-index:11; width:100% } */
+/* .important_message div { margin:0 auto; width:52em; padding:4px 0 } */
+/* .important_message p { margin:0; max-width:none } */
+
+/* #errorExplanation { margin-bottom:15px } */
+/* /\* end basic layout *\/ */
+
+/* /\* navigation *\/ */
+/* #navigation { height:67px; position:relative; width:30.05em } */
+/* #header>#navigation { margin:0 auto } */
+/* #navigation ol { position:absolute; left:0; bottom:0; height:2.5em } */
+/* #navigation li { float:left; height:2.5em; line-height:2.5em; width:6em } */
+/* #navigation li a { display:block; width:6em } */
+/* /\* end navigation *\/ */
+
+/* javascript request */
+.javascript #request_container { position:fixed; top:140px; height:100%; width:100%; z-index:11 }
+.javascript #request { margin:0 auto; width:40%; height:60%;
+                           min-height:340px; overflow:auto; position:relative }
+.javascript #request #request_body { padding:5px 15px 0 15px }
+.javascript #request h2 { margin-top:1em }
+.javascript #request h2#request_header { margin:0; padding:5px 15px }
+.javascript #request a#close_request { position:absolute; top:5px; right:8px }
+
+.javascript #request .edit_acceptance_criterion,
+.javascript #request .edit a,
+.javascript #request .delete form,
+.javascript #request #add_to_iteration,
+.javascript #request #next_steps { display:none }
+/* end javascript request */
+
+
+/* content */
+#actions { position:relative; float:right; width:124px; z-index:20 }
+#actions li { width:104px; display:block; margin:0 auto 1em auto }
+#actions a { width:104px; height:29px }
+
+div.section { position:relative; padding:40px 36px 22px 36px;
+              margin:23px 0 0 11px }
+div.with_subsections div.section { padding:0 }
+form div.with_subsections div.section { padding-bottom:5px }
+form div.with_subsections div.section div.subsection { padding-left:15px }
+.section .subsection { position:relative; overflow:hidden }
+div.section h3 { position:absolute; z-index:10; top:-25px; padding:12px 23px;
+              /*ie6*/ left:-50px }
+div.section>h3 { left:-13px }
+div.section .errorExplanation h3 { position: relative; padding: 0; margin: 0;
+    top:0; left: 0 }
+
+.section_container { position:relative; overflow:hidden }
+.section_container a.section,
+.section_container ul.section_links { position:absolute; right:9px; top:6px; z-index:20 }
+.section_container ul.section_links li { float:left; margin-left:1em }
+/* end content */
+
+/* /\* forms *\/ */
+/* form p { margin:5px 0 } */
+/* form p.submit { margin:15px 0 } */
+/* form p label { display:block; width:10em; float:left; line-height:1.5em } */
+/* form p.checkbox { overflow:hidden } */
+/* form p.checkbox input { float:left } */
+/* form p.checkbox label { display:inline; padding-left:5px; width:20em;  */
+/*                         line-height:1.2em } */
+/* /\* end forms *\/ */
+
+/* home/show */
+.section_container.first { width:56%; max-width:472px;
+                           min-width:275px; float:left;
+                           margin-right:30px;
+                           margin-bottom:30px }
+div#home_show #iterations { min-width:345px }
+div#home_show #iterations div.active { padding-top:45px }
+div#home_show #recently_finished_iterations .finished ol,
+div#home_show #iterations ol { overflow:hidden }
+div#home_show #recent_work .section { padding:0 }
+div#home_show #recent_work .section>ol>li { padding:45px 30px 15px 30px }
+div#home_show #recent_work .section>ol>li,
+div#home_show #recent_work li div.stories { overflow:hidden }
+div#home_show #recent_work li div.iteration { margin-right:30px }
+/* /\* end home/show *\/ */
+
+/* iterations/index */
+div#iterations_index .active,
+div#iterations_planned .planned,
+div#iterations_finished .finished { padding:45px 30px 30px 30px;
+                                     overflow:hidden }
+/* end iterations/index */
+
+/* stories/show */
+div#stories_show #users ul { width:20em }
+div#stories_show #users form.button-to { float:right; margin-top:-4px }
+div#stories_show #acceptance_criteria table { width:40%; margin-top:1em }
+div#stories_show #acceptance_criteria table td { padding:0 5px }
+div#stories_show #acceptance_criteria table td.edit,
+div#stories_show #acceptance_criteria table td.delete { width:4em }
+div#stories_show #acceptance_criteria table td.complete { width:1em }
+
+div#stories_show .javascript #acceptance_criteria table .submit_complete { display:none }
+div#stories_show #acceptance_criteria form { display:inline }
+/* end stories/show */
+
+/* stories/backlog */
+div#stories_backlog .ea_container.javascript p.submit,
+div#stories_backlog .javascript .story label,
+div#stories_backlog .javascript .story input { display:none }
+/* end stories/backlog */
+
+ol.stories, ol.stories * { margin:0; padding:0 }
+.iterations_list, .iteration_active * {  list-style:none; margin:0; padding:0 }
+
+.contextual { position:relative; z-index:50 }
+
+.col-left { float:left; width:48% }
+.clearer { clear:both }
+
+/* icons  */
+.icon-new-task { background-image: url(../../../../images/ticket.png); }
+.icon-plan-iteration { background-image: url(../../../../images/table_multiple.png); }
+.icon-ea-dashboard { background-image: url(../../../../images/news.png); }
+

@@ -1,0 +1,23 @@
+#container { background:url(/images/simply_agile_large.png) center top no-repeat }
+#header { text-indent:-20000px; 
+          background:#ff7f2a url(/images/a_simple_tool_for_effective_agile_teams.png) center 19px no-repeat }
+#footer, #footer a { color:#666 }
+#existing_users,
+#new_users,
+#new_user { background:#e5e5e5 }
+.flash { background:#ffbe93 }
+#existing_users form,
+#new_users p,
+form.new_user .container,
+.flash p { background:#fff }
+
+ul li { list-style-type:square }
+ol li { list-style-type:decimal }
+ul#images li { list-style-type:none }
+ul#images li p { color:#444 }
+ul#images img { border:1px solid #ccc }
+
+#main p { color:#444 }
+
+#user_story_description { }
+#why_not_tasks { background:#e5e5e5 url(/images/arrow_from_grey.png) no-repeat }

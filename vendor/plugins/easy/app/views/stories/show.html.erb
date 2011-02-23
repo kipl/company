@@ -1,0 +1,79 @@
+<% content_for :title, "#{@story} | #{@project} " + l(:story_plural) %>
+<% content_for :h2, l(:story) + " ##{@story.id}" %>
+<% content_for :actions do %>
+<li><%= link_to l(:button_edit), [:edit, @project, @story] %></li>
+<li><%= link_to l(:feature), project_story_path(@project, @story, :format => 'feature') %></li>
+<% end %>
+
+<div class="col-left">
+  <div class="<%= story_classes @story %>">
+    <div class="story_content">
+      <div class="story_header">
+        <h4><%= h @story %></h4>
+        <% if @story.estimate? %>
+        <p class="estimate" title="Story Points"><span>Story Points:</span> <%= @story.estimate %></p>
+        <% end %>
+       </div>
+      <%= story_format @story.content %>
+     </div>
+   </div>
+</div>
+
+<% if @story.iteration && @story.iteration.active? %>
+  <div id="users" class="clearer">
+    <h3><%= l(:story_team) %></h3>
+    <% unless @story.team_members.empty? %>
+      <ul>
+      <%= render @story.team_members %>
+      </ul>
+    <% end %>
+
+    <% unless @story.users.include?(User.current) %>
+      <% form_for [@project, StoryTeamMember.new(:story => @story)] do |f| %>
+        <p class="submit">
+        <%= f.hidden_field :story_id %>
+        <%= f.submit l(:work_on_story) %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
+
+<div id="acceptance_criteria" class="clearer">
+  <h3><%= l(:acceptance_criteria) %></h3>
+  <% form_for [@project, @story, AcceptanceCriterion.new], :html => { :class => "add" } do |f| %>
+    <%= f.error_messages %>
+    <p>
+      <%= f.label :criterion, l(:new_criterion) %>
+      <%= f.text_field :criterion, :class => 'auto_focus', :size => 20 %>
+      <%= f.submit l(:button_add) %>
+    </p>
+  <% end %>
+
+  <div class="story_content">
+    <%= render :partial => 'acceptance_criteria/list' %>
+  </div>
+</div>
+
+<div id="next_steps">
+  <% if @story.iteration %>
+    <h3><%= l(:iteration) %></h3>
+    <ul>
+      <li>
+        <%= link_to h(@story.iteration.name), project_iteration_path(@project, @story.iteration) %>
+      </li>
+    </ul>
+  <% end %>
+
+  <% if @story.iteration_id.blank? || @story.iteration.pending? %>
+    <h3><%= l(:next_steps) %></h3>
+    <ul>
+      <li>
+        <%= link_to l(:new_story), contextual_new_story_path %>
+      </li>
+      <li>
+        <%= link_to l(:backlog), backlog_project_stories_path(@project) %>
+      </li>
+    </ul>
+  <% end %>
+</div>

@@ -1,0 +1,174 @@
+en:
+  contacts_title: DIN
+  
+  label_contacts_view_all: View all DIN
+  label_contact_files: Files
+  label_task_plural: Tasks and Downloads
+  label_contact_background_info: Background info
+  label_contact: Person
+  label_company: Company   
+  label_contact_plural: DIN List   
+  label_contact_information: DIN Information
+  label_contact_edit_information: Editing DIN Information
+  label_contact_DIN1 : DIN - I
+  label_contact_DIN2 : DIN - II
+  label_contact_DIN4 : DIN - IV
+  label_contact_DINHelp : DIN Help
+  label_edit_tags: Edit tags
+  label_contact_view: View
+  label_contact_list: List
+  label_contact_new: New
+  label_at_company: at
+  label_last_notes: Latest notes
+  label_tags_plural: Tags
+  label_contact_tag: Tag
+  label_time_ago: ago
+  label_add_note_plural: Add note to 
+  label_note_plural: Notes
+  label_company_employees: Employees
+  label_add_tags_rule: devide by commas
+  label_search: Search by name
+  label_note_for: Note for
+  label_show_on_map: Show on map   
+  label_add_another_phone: add phone   
+  label_contact_note_plural: All notes  
+  label_remove: delete        
+  label_related_contacts: Related DIN    
+  label_assigned_to: Responsible
+  label_issue_added: Issue added
+  label_add_emails_rule: divide by commas
+  label_add_phones_rule: divide by commas
+  label_add_din_rule: Director Identification Number Will be filled by Company Secretery After receving DIN from MCA
+  label_add_status_rule: Keep Status Pending Company Secretery will update the status
+  label_add_employee: New employee
+   
+  label_note_show_extras: Advanced (files, date)
+  label_note_hide_extras: Hide advanced       
+  label_note_added: The note is successfully added
+
+  label_deal_plural: Deals
+  label_contractor_plural: Contactors
+  label_deal: Deal     
+  label_deal_new: New deal
+  label_deal_edit_information: Edit deal information   
+  label_deal_change_status: Change status 
+  label_deal_pending: Pending
+  label_deal_won: Won
+  label_deal_lost: Lost 
+  
+
+  field_note_date: Note date
+  
+  field_deal_name: Name
+  field_deal_background: Background
+  field_deal_contact: Contact    
+  field_deal_price: Sum  
+  field_price: Sum  
+  
+  field_contact_avatar: Avatar
+  field_contact_is_company: Company
+  field_contact_name: Name
+  field_contact_last_name: Last Name
+  field_contact_first_name: First Name
+  field_contact_middle_name: Middle Name
+  field_contact_gender     : Gender
+  field_contact_maritalstatus: Marital Status
+  field_contact_din           : Director Identification Number
+  field_contact_fatherfname: Father First Name
+  field_contact_fathermname: Father Middle Name
+  field_contact_fatherlname: Father Last Name
+  field_contact_husbandfname: Husband First Name
+  field_contact_husbandmname: Husband Middle Name
+  field_contact_husbandlname: Husband Last Name
+  field_contact_nationality: Nationality
+  field_contact_birthplace: Birthplace
+  field_contact_panno: Pan No
+  field_contact_electionid: Election Id
+  field_contact_passportno: Passport No
+  field_contact_dlicenceno: Driving Licence No
+  field_contact_city: City
+  field_contact_state: State
+  field_contact_country: Country
+  field_contact_pincode: Pincode
+  field_contact_faxno: Fax No
+  field_contact_permanentaddress1: Permanent Address1
+  field_contact_permanentaddress2: Permanent Address2
+  field_contact_permanentcity: Permanent City
+  field_contact_permanentstate: Permanent State
+  field_contact_permanentcountry: Permanent Country
+  field_contact_permanentpincode: Permanent Pincode
+  field_contact_permanentphoneno: Permanent Phone No
+  field_contact_permanentfaxno: Permanent Fax No
+  field_contact_permanentemail: Permanent Email 
+  field_contact_job_title: Job title
+  field_contact_company: Company
+  field_contact_address: Address
+  field_contact_phone: Phone
+  field_contact_email: Email
+  field_contact_website: Website
+  field_contact_skype: Skype
+  field_contact_status: Status   
+  field_contact_background: Background   
+  field_contact_tag_names: Tags   
+  field_first_name: Name
+  field_last_name: Last name
+  field_company: Company 
+  field_birthday: Birthday      
+  field_contact_department: Department
+  
+  field_company_field: Industry
+  field_company_din: Din No 
+  
+  field_customer_DIN: Director Identification Number
+  field_customer_name: Name
+  field_customer_address_line1: Address Line I
+  field_customer_address_line2: Address Line II
+  field_customer_city: City
+  field_customer_state: State
+  field_customer_pincode: Pincode
+  field_customer_ISO: ISO Country Code
+  field_customer_country: Country
+  field_customer_email: E-mail Id
+  field_customer_newcompany: New Company(others)
+  field_customer_section25: Section 25 Company
+  field_customer_partIX: Part IX Company
+  field_customer_producer: Producer(PartXA)Company
+  field_customer_category_of_company: State the category of prposed company
+  field_customer_subcategory_of_company: State the sub-category of proposed company
+  field_customer_state_of_registration: Name of the state in which the proposed comapny is to be registred
+  field_customer_ROCaddress: Name of the Office of the Registrar of Companies in which the proposed company is to be registred
+  field_customer_number_of_promoters: Enter the number of promoters(First Subscriber of MOA)
+  field_customer_occupation: Occupation
+  field_customer_category: Category
+  field_customer_name_of_company1: (A)
+  field_customer_name_of_company2: (B)
+  field_customer_name_of_company3: (C)
+  field_customer_name_of_company4: (D)
+  field_customer_name_of_company5: (E)
+  field_customer_name_of_company6: (F)
+  field_customer_significance_of_name1: (A)
+  field_customer_significance_of_name2: (B)
+  field_customer_significance_of_name3: (C)
+  field_customer_significance_of_name4: (D)
+  field_customer_significance_of_name5: (E)
+  field_customer_significance_of_name6: (F)
+  field_customer_main_objects: Main Objects
+  field_customer_trade_app: if yes furnish particulars of trade mark or application
+  field_customer_authorizedcapital: Proposed autorised capital
+  field_customer_authcap: Proposed autorised capital (in words)
+  field_customer_DIN1: DIN
+  
+  button_add_note: Add note  
+  notice_successful_save: Saved successfully 
+  notice_successful_add: Successfully created
+  notice_unsuccessful_save: Save problems
+  
+  project_module_contacts_module: DIN
+  
+  permission_view_contacts: View DIN
+  permission_edit_contacts: Edit DIN
+  permission_delete_contacts: Delete DIN
+  permission_view_deals: View deals
+  permission_edit_deals: Edit deals
+  permission_delete_deals: Delete deals   
+  permission_add_notes: Add notes   

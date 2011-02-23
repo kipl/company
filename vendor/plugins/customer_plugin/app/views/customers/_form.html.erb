@@ -1,0 +1,253 @@
+<%= error_messages_for 'customer' %>
+
+<div class="box">
+<p><label for="application_for">Application For:</label>
+			<%= radio_button :customers, :application_for, "new",:checked => "checked" %> Incorporating a new company 
+			<%= radio_button :customers, :application_for, "change" %> Changing the name of an existing company
+</p>
+<p><h3>Part A: Availablity Of Name</h3></p>
+<h4>Details Of Applicant</h4>
+<p>
+	<%= f.text_field 'DIN',:label=>l(:field_customer_DIN)%>
+</p>
+<p>
+	<%= f.text_field 'name',:label=>l(:field_customer_name)%>
+</p>
+<p>
+	<%= f.text_field 'occupation',:label=>l(:field_customer_occupation)%>
+</p>
+
+<p>
+	<%= f.text_field 'address_line1',:label=>l(:field_customer_address_line1)%>
+</p>
+<p>
+	<%= f.text_field 'address_line2',:label=>l(:field_customer_address_line2)%>
+</p>
+<p>
+	<%= f.text_field 'city',:label=>l(:field_customer_city)%>
+</p>
+<p>
+	<%= f.text_field 'state',:label=>l(:field_customer_state)%>
+</p>
+<p>
+	<%= f.text_field 'pincode',:label=>l(:field_customer_pincode)%>
+</p>
+<p>
+	<%= f.text_field 'ISO',:label=>l(:field_customer_ISO)%>
+</p>
+<p>
+	<%= f.text_field 'country',:label=>l(:field_customer_country)%>
+</p>
+<p>
+<%= f.text_field 'email', :label=>l(:field_customer_email) -%>
+</p>
+<p>
+<%= f.text_field 'phone', :label=>l(:field_customer_phone) -%>
+</p>
+<h4>Company Details</h4>
+<p><label for="type_of_company">Type of Company:</label></br>
+
+			<%= f.check_box 'type_of_company',:label=>(:field_customer_newcompany)%></br>
+			<%= f.check_box 'type_of_company',:label=>(:field_customer_section25)%></br>
+			<%= f.check_box 'type_of_company',:label=>(:field_customer_partIX)%></br>
+			<%= f.check_box 'type_of_company',:label=>(:field_customer_producer)%> </br>
+			
+</p>
+<p><label for="is_public">State Whether the proposed company is public or private:</label>
+			<%= radio_button :customers, :is_public, "public" %> Public 
+			<%= radio_button :customers, :is_public, "private" %> Private
+</p>
+<p>
+<%= f.text_field 'category_of_company', :label=>l(:field_customer_category_of_company) -%>
+</p>
+<p>
+<%= f.text_field 'subcategory_of_company', :label=>l(:field_customer_subcategory_of_company) -%>
+</p>
+<p><label for="is_share_capital">Whether the proposed company is :</label>
+			<%= radio_button :customers, :is_share_capital, "sharecapital" %> Having Share Capital 
+			<%= radio_button :customers, :is_share_capital, "nothaving" %> Not Having Share Capital
+</p>
+<p>
+<%= f.text_field 'state_of_registration', :label=>l(:field_customer_state_of_registration) -%>
+</p>
+<p>
+<%= f.text_field 'ROCaddress', :label=>l(:field_customer_ROCaddress) -%>
+</p>
+<h4>Details of Promoters(Proposed first subscribers to Memorandum of Association(MOA))</h4>
+<p>
+<%= f.text_field 'number_of_promoters', :label=>l(:field_customer_number_of_promoters) -%>
+</p>
+<p>
+<div class="box1">
+	<h4>Promoter I</h4>
+<p>
+	<%= f.text_field 'category', :label=>l(:field_customer_category) -%>
+</p>
+<p>
+	<%= f.text_field 'DIN', :label=>l(:field_customer_DIN) -%>
+</p>
+<p>
+	<%= f.text_field 'name', :label=>l(:field_customer_name) -%>
+</p>
+</div>
+</p>
+<p>
+<div class="box1">
+	<h4>Promoter II</h4>
+<p>
+	<%= f.text_field 'category', :label=>l(:field_customer_category) -%>
+</p>
+<p>
+	<%= f.text_field 'DIN', :label=>l(:field_customer_DIN) -%>
+</p>
+<p>
+	<%= f.text_field 'name', :label=>l(:field_customer_name) -%>
+</p>
+</div>
+</p>
+<p>
+	<div class="box1">
+	<div style=" width: 50%;">
+		<h4>Proposed Name of Company(Please give 6 name in order of preference)</h4>
+    <p>
+	<%= f.text_field 'name_of_company', :label=>l(:field_customer_name_of_company1) -%></br>
+	<%= f.text_field 'name_of_company', :label=>l(:field_customer_name_of_company2) -%></br>
+	<%= f.text_field 'name_of_company', :label=>l(:field_customer_name_of_company3) -%></br>
+	<%= f.text_field 'name_of_company', :label=>l(:field_customer_name_of_company4) -%></br>
+	<%= f.text_field 'name_of_company', :label=>l(:field_customer_name_of_company5) -%></br>
+	<%= f.text_field 'name_of_company', :label=>l(:field_customer_name_of_company6) -%></br>
+    </p>
+   </div>
+   <div style=" width: 49%; margin: -225px 2px 37px 663px">
+	<h4>Significance of key or coined word(s),if any,in the proposed name(s)in brief</h4>
+	<p>
+		<%= f.text_field 'significance_of_name', :label=>l(:field_customer_significance_of_name1) -%></br>
+		<%= f.text_field 'significance_of_name', :label=>l(:field_customer_significance_of_name2) -%></br>
+		<%= f.text_field 'significance_of_name', :label=>l(:field_customer_significance_of_name3) -%></br>
+		<%= f.text_field 'significance_of_name', :label=>l(:field_customer_significance_of_name4) -%></br>
+		<%= f.text_field 'significance_of_name', :label=>l(:field_customer_significance_of_name5) -%></br>
+		<%= f.text_field 'significance_of_name', :label=>l(:field_customer_significance_of_name6) -%></br>
+	</p>
+    </div>
+</div>
+</p>
+<div class="box1">
+	<h4>Main objects of the proposed comapny to be included in its MOA</h4>
+	<p>
+	<%= f.text_area 'main_objects', :label=>l(:field_customer_main_objects),:style=>"200px",:rows=>"9",:cols=>"55"%>
+	</p>
+</div>
+<p><label for="consonace_with_main_objects">Whether the proposed name is in consonace with main objects:</label>
+			<%= radio_button :customers, :consonace_with_main_objects, "yes" %> Yes 
+			<%= radio_button :customers, :consonace_with_main_objects, "no" %> No
+</p>
+<div class="box1">
+	<p><label for="trade_mark">Whether the proposed name(s)are based on registred trade mark:</label>
+			<%= radio_button :customers, :trade_mark, "yes" %> Yes 
+			<%= radio_button :customers, :trade_mark, "no" %> No
+	</p>
+	<p>
+	<%= f.text_area 'trade_app', :label=>l(:field_customer_trade_app),:style=>"200px",:rows=>"9",:cols=>"55"%>
+	</p>
+</div>
+<div class="box1">
+	<p>
+	<%= f.text_field 'authorizedcapital', :label=>l(:field_customer_authorizedcapital) -%></br>
+	</p>
+	<p>
+	<%= f.text_area 'authcap', :label=>l(:field_customer_authcap),:style=>"200px",:rows=>"2",:cols=>"55"%>
+	</p>
+</div>
+<p>
+<h4>Particulars Of Proposed Directors</h4>
+<div class="box1">
+	<h4>Director I</h4>
+	<p>
+		<%= f.text_field 'DIN', :label=>l(:field_customer_DIN1) -%></br>
+	</p>
+	<p>
+		<%= f.text_field 'name', :label => l(:field_customer_name)%>
+	</p>
+	<p>
+		<%= f.text_field 'fathername', :label => l(:field_customer_fathername)%>
+	</p>
+	<p>
+		<%= f.text_field 'dob', :label => l(:field_customer_dob)%>
+	</p>
+	<p>
+		<%= f.text_field 'panno', :label => l(:field_customer_panno)%>
+	</p>
+	<p>
+		<%= f.text_field 'passportno', :label => l(:field_customer_passportno)%>
+	</p>
+	<p>
+		<%= f.text_field 'voterid', :label => l(:field_customer_voterid)%>
+	</p>
+	<p>
+		<%= f.text_field 'presentaddress', :label => l(:field_customer_presentaddress)%>
+	</p>
+</div>
+<div class="box1">
+	<h4>Director II</h4>
+	<p>
+		<%= f.text_field 'DIN', :label=>l(:field_customer_DIN1) -%></br>
+	</p>
+	<p>
+		<%= f.text_field 'name', :label => l(:field_customer_name)%>
+	</p>
+	<p>
+		<%= f.text_field 'fathername', :label => l(:field_customer_fathername)%>
+	</p>
+	<p>
+		<%= f.text_field 'dob', :label => l(:field_customer_dob)%>
+	</p>
+	<p>
+		<%= f.text_field 'panno', :label => l(:field_customer_panno)%>
+	</p>
+	<p>
+		<%= f.text_field 'passportno', :label => l(:field_customer_passportno)%>
+	</p>
+	<p>
+		<%= f.text_field 'voterid', :label => l(:field_customer_voterid)%>
+	</p>
+	<p>
+		<%= f.text_field 'presentaddress', :label => l(:field_customer_presentaddress)%>
+	</p>
+</div>
+</p>
+<p><h3>Part B: In Case of change of Name</h3></p>
+<div class="box1">
+	<p>
+		<%= f.text_field 'cin_of_company', :label => l(:field_customer_cinofcompany)%>
+	</p>
+	<p>
+		<%= f.text_field 'GLN', :label => l(:field_customer_GLN)%>
+	</p>
+	<p>
+		<%= f.text_field 'name_of_company', :label => l(:field_customer_nameofcompany)%>
+	</p>
+	<p>
+		<%= f.text_field 'address_of_regoff', :label => l(:field_customer_addressofregoff)%>
+	</p>
+	<p>
+		<%= f.text_field 'email_id', :label => l(:field_customer_emailid)%>
+	</p>
+	<p>
+		<%= f.text_field 'present_auth_capital', :label => l(:field_customer_presentauthcapital)%>
+	</p>
+	<p>
+		<%= f.text_field 'present_auth_cap', :label => l(:field_customer_presentauthcap)%>
+	</p>
+	<p>
+		<%= f.text_field 'max_number_of_members', :label => l(:field_customer_maxnum)%>
+	</p>
+	<p><label for="is_change_in_mainobj">Whether the change in name requires the change in main objects:</label>
+			<%= radio_button :customers, :is_change_in_mainobj, "yes" %> Yes 
+			<%= radio_button :customers, :is_change_in_mainobj, "no" %> No
+	</p>
+	<p>
+		<%= f.text_area 'reason_for_change_in_mainobj',:label => l(:field_customer_reason),:rows => "10", :cols => "40"%>
+	</p>
+</div>
+
+</div>

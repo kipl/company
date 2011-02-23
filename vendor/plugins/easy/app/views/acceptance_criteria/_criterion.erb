@@ -1,0 +1,17 @@
+<tr class="display">
+  <td class="complete">
+    <% form_for [@project, @story, criterion] do |f| -%>
+      <p>
+      <%= hidden_field_tag "acceptance_criterion[complete]",
+        ! criterion.complete?, :id => "complete_#{criterion.id}" %>
+      <%= f.submit criterion.complete? ? l(:uncomplete) : l(:complete), :id => nil, :class => 'submit_complete' %>
+      </p>
+    <% end -%>
+  </td>
+  <td class="name"><%= h criterion %></td>
+  <td class="edit"><%= link_to l(:button_edit),
+      edit_project_story_acceptance_criterion_url(@project, @story, criterion)
+  %></td>
+  <td class="delete"><%= button_to l(:button_delete), [@project, @story, criterion],
+    :method => :delete, :class => "delete" %></td>
+</tr>

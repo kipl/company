@@ -1,0 +1,6 @@
+div.iteration_active .javascript #stories .guidance p { max-width:none; margin:1em 0px }
+div.iteration_active .javascript #stories .guidance,
+div.iteration_active .javascript #burndown,
+div.iteration_active .javascript #headings ol li { text-align:center }
+div.iteration_active h1 { margin-bottom:0 }
+div.iteration_active #content .story li { font-size:93%; padding:2px 5px 1px }

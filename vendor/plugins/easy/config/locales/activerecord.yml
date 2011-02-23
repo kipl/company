@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      story:
+        content: "Story content"
+    errors:
+      messages:
+        invalid: "is invalid"
+        not_routable: "does not appear to exist"
+        taken: "has been taken"
+        blank: "is blank"
+        greater_than_or_equal_to: "must be at least {{count}}"
+        not_a_number: "must be a number"
+        expired: "has passed"
+      models:
+        iteration:
+          attributes:
+            stories:
+              not_estimated: "must have some story points (estimations). You should re-plan this iteration and add story points."
+      template:
+        header:
+          one: "Error"
+          other: "{{count}} errors"
+        body: ""

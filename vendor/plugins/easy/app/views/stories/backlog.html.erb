@@ -1,0 +1,25 @@
+<% content_for :title, "#{@project} #{l(:backlog)}" %>
+<% content_for :h2, h("#{@project} #{l(:backlog)}") %>
+
+<% form_for :project, @project, :url => { :action => 'edit' } do |f| %>
+
+<p class="guidance"><%= l(:backlog_drag_stories) %></p>
+<ol class="stories">
+  <%= render @project.stories.backlog %>
+</ol>
+<p class="submit">
+<%= f.submit 'Save Priorities' %>
+</p>
+<% end %>
+
+<div id="next_steps">
+  <h2><%= l(:next_steps) %></h2>
+  <ul>
+    <li>
+    <%= link_to l(:new_story), contextual_new_story_path %>
+    </li>
+    <li>
+    <%= link_to l(:plan_iteration), new_project_iteration_path(@project) %>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,11 @@
+<% content_for :title, @acceptance_criterion %>
+<% content_for :h2, h(@acceptance_criterion) %>
+
+<% form_for [@project, @story, @acceptance_criterion] do |f| %>
+  <p>
+  <%= f.label :criterion %>
+  <%= f.text_field :criterion, :class => 'auto_focus' %>
+  <%= f.submit 'Update' %>
+  </p>
+<% end %>
+

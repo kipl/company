@@ -1,0 +1,19 @@
+<p class="guidance"><%= l(:iteration_plan_guidance) %></p>
+<%= form.error_messages %>
+<p>
+<%= form.label :name %>
+<%= form.text_field :name %>
+</p>
+<p>
+<%= form.label :duration, l(:duration_days) %>
+<%= form.text_field :duration, :class => 'numeric', :size => 2 %>
+</p>
+
+<div id="stories">
+  <div class="section" id="stories_available">
+    <h2><%= l(:backlog) %></h2>
+    <ol class="stories">
+      <%= render @stories %>
+    </ol>
+  </div>
+</div>

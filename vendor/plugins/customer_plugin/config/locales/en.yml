@@ -1,0 +1,51 @@
+en:
+    customer_title: Company INC
+    label_customer: Company INC
+    label_customer_plural: Company List
+    label_customer_information: Company Information
+    label_customer_edit_information: Editing Company Information
+    label_customer_assign_to_project: Assign Company to Client
+    label_customer_view: View
+    label_customer_assign: Assign
+    label_customer_list: List
+    label_customer_new: New
+    field_customer_name: Director Name
+    field_customer_company: Company Name
+    field_customer_address: Address
+    field_customer_phone: Phone
+    field_customer_email: Email
+    field_customer_website: Website
+    field_customer_CINno : CIN No
+    field_customer_state : State
+    field_customer_city : City
+    field_customer_ROCaddress : ROC address
+    field_customer_statecode : State Code
+    field_customer_pincode : Pincode
+    field_customer_authorizedcapital : Authorized Capital
+    field_customer_NomVal : Nominal Value
+    field_customer_Issued : Issued Shares
+    field_customer_Subscribed : Subscribed Shares
+    field_customer_Paidup : Paid Up Capital
+    field_customer_INCdate : Incorporation Date
+    field_customer_faxno : Fax No
+    field_customer_GMNTperiod : GMNT period
+    field_customer_GMNTArtNo : GMNT Article No
+    field_customer_EXPLSTAArtNo : EXPLSTA Article No
+    field_customer_skype: Skype
+    notice_successful_save: Saved
+    notice_unsuccessful_save: Could not save
+    field_customer_presentaddress: Present Residential Address
+    field_customer_voterid: Voter Id
+    field_customer_passportno: Passport Number
+    field_customer_panno: Permanent Account Number
+    field_customer_dob: Date of Birth
+    field_customer_fathername: Father Name
+    field_customer_cinofcompany: Cin of Company
+    field_customer_presentauthcap: Present Authorised Capital(in words)
+    field_customer_presentauthcapital: Present Authorised Capital(in Rs.)
+    field_customer_emailid: Email-Id of Company
+    field_customer_addressofregoff: Address of Registred office
+    field_customer_nameofcompany: Name of Company
+    field_customer_GLN: Global Location Number(GLN) of Company
+    field_customer_reason: Reason for change in name(in case of yes above mention the proposed object of company)
+    

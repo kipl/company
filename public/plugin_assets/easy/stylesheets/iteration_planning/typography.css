@@ -1,0 +1,4 @@
+div.iteration_planning .include a { text-indent:-20000px; outline:none;
+                                     text-underline:none }
+div.iteration_planning .display h4 { font-weight:bold }
+div.iteration_planning .javascript #stories span.estimate { text-align:center }

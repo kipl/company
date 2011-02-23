@@ -1,0 +1,25 @@
+<% content_for :title, "#{@iteration}" %>
+<% content_for :h2, h(@iteration) %>
+<% body_classes << 'iteration_active' %>
+
+<div id="stories">
+  <h2><%= l(:story_plural) %></h2>
+  <div class="guidance"><p><%= l(:iteration_drag_stories) %></p></div>
+  <ol class="stories">
+    <%= render @iteration.stories %>
+  </ol>
+</div>
+
+<div id="burndown">
+  <%= image_tag(project_iteration_burndown_path(@project, @iteration, :width => 350),
+                :alt => 'Burndown Chart',
+                :width => 350) %>
+  <p id="time_remaining">
+  <% if @iteration.finished? %>
+    <%= l(:iteration_finished_on) %>  <strong><%= @iteration.end_date %></strong>
+  <% else %>
+    <strong><%=  @iteration.start_date %></strong><strong> - <%=  @iteration.end_date %></strong>. <%= l(:iteration_days_left) %>: <strong><%= @iteration.days_remaining.to_s %></strong>.
+  <% end %>
+  </p>
+</div>
+

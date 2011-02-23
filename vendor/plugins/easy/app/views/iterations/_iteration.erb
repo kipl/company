@@ -1,0 +1,14 @@
+<%
+  width ||= 300
+  ratio = 600 / width
+  height = 450 / ratio
+%>
+
+<li class="iteration">
+<%=
+    image = iteration.pending? ? 'burndown.png' : project_iteration_burndown_path(iteration.project, iteration, :width => width)
+    options = {:width => width, :height => height, :alt => l(:burndown_for) + " #{h iteration.name}"}
+    options[:plugin] = 'easy_agile' if iteration.pending?
+    link_to(image_tag(image, options), [iteration.project, iteration]) %>
+<%= link_to h(iteration), [iteration.project, iteration] %>
+</li>
